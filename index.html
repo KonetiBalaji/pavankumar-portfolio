@@ -188,6 +188,38 @@
     }
 
     .btn-resume:hover { background: var(--accent-dark); }
+
+    /* ── HERO ── */
+    .hero-greeting {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .hero-name {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .hero-roles {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .hero-summary {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-body);
+      max-width: 640px;
+    }
+
+    .hero-summary strong { color: var(--text-heading); }
   </style>
 </head>
 <body>
@@ -226,7 +258,21 @@
   </aside>
 
   <main class="main">
-    <!-- filled in Tasks 3-9 -->
+    <section id="about">
+      <p class="hero-greeting">Hi there, I'm</p>
+      <h1 class="hero-name">Pavankumar Chilukoti</h1>
+      <p class="hero-roles">Data Scientist &nbsp;·&nbsp; Data Analyst &nbsp;·&nbsp; AI/ML Engineer</p>
+      <p class="hero-summary">
+        Data Scientist / AI-ML Engineer with <strong>6+ years of experience</strong> building and scaling
+        end-to-end machine learning and LLM-powered systems across fintech and enterprise domains.
+        Proven track record of deploying <strong>RAG-based AI solutions serving 1M+ users</strong>,
+        improving model accuracy by 25% and driving <strong>18%+ conversion uplift</strong> through
+        experimentation and optimization. Expert in LLMs, causal inference, uplift modeling, and
+        large-scale ML systems, with hands-on experience in real-time microservices
+        (<strong>&lt;200ms latency</strong>), distributed data processing (Spark, Kafka), and MLOps
+        (Kubeflow, MLflow, CI/CD) achieving <strong>99.9% uptime</strong>.
+      </p>
+    </section>
   </main>
 
   <script>
