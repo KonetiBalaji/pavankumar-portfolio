@@ -389,6 +389,81 @@
       font-size: 10px;
       top: 3px;
     }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--sidebar-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 24px rgba(99,102,241,0.12);
+      transform: translateY(-2px);
+    }
+
+    .project-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+
+    .project-type {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .project-desc {
+      font-size: 12px;
+      color: var(--text-body);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .project-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .project-bullets li {
+      font-size: 11px;
+      color: var(--text-body);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .project-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 9px;
+      top: 2px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+    }
   </style>
 </head>
 <body>
@@ -659,6 +734,72 @@
               <li>Designed RESTful APIs for ML inference and integrated them into production systems</li>
               <li>Performed EDA, statistical modeling, and feature engineering to improve model performance</li>
             </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <p class="section-label">Projects</p>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-type">Enterprise AI</div>
+          <div class="project-title">LLM-Powered RAG Knowledge Assistant</div>
+          <ul class="project-bullets">
+            <li>RAG-based LLM system — semantic search across 1M+ documents</li>
+            <li>Retrieval optimization (chunking, re-ranking, hybrid search) → 20–30% accuracy boost</li>
+            <li>LangChain + OpenAI/Llama for multi-step reasoning</li>
+            <li>FastAPI microservices &lt;200ms latency</li>
+            <li>35% reduction in hallucinations via RAGAS evaluation pipeline</li>
+            <li>Deployed on AWS (S3, Lambda, EC2) with CI/CD</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag tag-indigo">RAG</span>
+            <span class="tag tag-indigo">LangChain</span>
+            <span class="tag tag-indigo">OpenAI</span>
+            <span class="tag tag-orange">FastAPI</span>
+            <span class="tag tag-red">AWS</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-type">Streaming ML</div>
+          <div class="project-title">Real-Time Fraud Detection System</div>
+          <ul class="project-bullets">
+            <li>Real-time fraud detection using Kafka + PySpark on high-volume streams</li>
+            <li>XGBoost + LightGBM classifiers achieving 92%+ precision</li>
+            <li>Feature engineering: session patterns, velocity features</li>
+            <li>Low-latency inference pipeline &lt;150ms</li>
+            <li>25% reduction in fraud losses via alerting &amp; monitoring</li>
+            <li>40% improvement in pipeline throughput</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag tag-orange">Kafka</span>
+            <span class="tag tag-orange">PySpark</span>
+            <span class="tag tag-green">XGBoost</span>
+            <span class="tag tag-green">LightGBM</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-type">MLOps</div>
+          <div class="project-title">End-to-End MLOps Pipeline with Auto-Retraining</div>
+          <ul class="project-bullets">
+            <li>Full pipeline: data → training → deployment → monitoring (Airflow + MLflow)</li>
+            <li>Automated retraining triggered by data drift detection</li>
+            <li>Docker + Kubernetes deployment — 99.9% uptime</li>
+            <li>CI/CD (Jenkins, GitHub Actions) — 50% faster deployments</li>
+            <li>Model versioning, experiment tracking, reproducibility</li>
+            <li>Monitoring dashboards for drift, latency, and performance</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag tag-purple">MLflow</span>
+            <span class="tag tag-purple">Kubeflow</span>
+            <span class="tag tag-orange">Airflow</span>
+            <span class="tag tag-red">Docker</span>
+            <span class="tag tag-red">Kubernetes</span>
           </div>
         </div>
 
