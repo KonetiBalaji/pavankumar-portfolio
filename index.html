@@ -430,13 +430,6 @@
       letter-spacing: 1px;
     }
 
-    .project-desc {
-      font-size: 12px;
-      color: var(--text-body);
-      line-height: 1.7;
-      flex: 1;
-    }
-
     .project-bullets {
       list-style: none;
       display: flex;
@@ -591,7 +584,7 @@
         overflow-y: visible;
       }
 
-      .sidebar > *:not(.sidebar-nav):not(.sidebar-avatar) { display: none; }
+      .sidebar > *:not(.sidebar-nav):not(.sidebar-identity) { display: none; }
 
       .sidebar-avatar {
         width: 36px;
@@ -627,6 +620,8 @@
       .education-grid { grid-template-columns: 1fr; }
 
       .hero-name { font-size: 26px; }
+
+      section { scroll-margin-top: 68px; }
     }
   </style>
 </head>
@@ -657,7 +652,7 @@
       <!-- TODO: replace YOUR_LINKEDIN and YOUR_GITHUB with actual URLs -->
       <div class="sidebar-contact-label">Connect</div>
       <a href="mailto:pavankumarchilukoti98@gmail.com">✉ pavankumarchilukoti98@gmail.com</a>
-      <span>📞 +1 (928) 600-3331</span>
+      <a href="tel:+19286003331">📞 +1 (928) 600-3331</a>
       <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">in LinkedIn</a>
       <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">⌥ GitHub</a>
     </div>
@@ -1000,11 +995,11 @@
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    © 2026 Pavankumar Chilukoti · Built with HTML, CSS &amp; JS
-  </footer>
+    <footer class="site-footer">
+      © 2026 Pavankumar Chilukoti · Built with HTML, CSS &amp; JS
+    </footer>
+  </main>
 
   <script>
     function animateCountUp(el) {
@@ -1039,7 +1034,7 @@
 
     // Active nav highlight
     const navLinks = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('main section[id]');
+    const sections = document.querySelectorAll('main section[id]:not(#metrics)');
 
     const navObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
