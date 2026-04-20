@@ -81,8 +81,8 @@
 
     /* ── SIDEBAR COMPONENTS ── */
     .sidebar-avatar {
-      width: 72px;
-      height: 72px;
+      width: 80px;
+      height: 80px;
       background: var(--accent);
       border-radius: 50%;
       display: flex;
@@ -92,6 +92,23 @@
       font-size: 22px;
       font-weight: 700;
       margin: 0 auto 12px;
+      overflow: hidden;
+      border: 3px solid var(--accent-tint);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .sidebar-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .sidebar-avatar[data-initials]::after {
+      content: attr(data-initials);
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
     }
 
     .sidebar-name {
@@ -629,7 +646,9 @@
 
   <aside class="sidebar">
     <div class="sidebar-identity">
-      <div class="sidebar-avatar">PC</div>
+      <div class="sidebar-avatar">
+        <img src="photo.jpg" alt="Pavankumar Chilukoti" onerror="this.style.display='none';this.parentElement.setAttribute('data-initials','PC')" />
+      </div>
       <div class="sidebar-name">Pavankumar<br>Chilukoti</div>
       <div class="sidebar-title">Data Scientist · AI/ML Engineer</div>
     </div>
@@ -649,12 +668,11 @@
     <div class="sidebar-divider"></div>
 
     <div class="sidebar-contact">
-      <!-- TODO: replace YOUR_LINKEDIN and YOUR_GITHUB with actual URLs -->
       <div class="sidebar-contact-label">Connect</div>
       <a href="mailto:pavankumarchilukoti98@gmail.com">✉ pavankumarchilukoti98@gmail.com</a>
       <a href="tel:+19286003331">📞 +1 (928) 600-3331</a>
-      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">in LinkedIn</a>
-      <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">⌥ GitHub</a>
+      <a href="https://www.linkedin.com/in/pavankumar-ch/" target="_blank" rel="noopener">in LinkedIn</a>
+      <a href="https://github.com/chilukotipavankumar" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg> GitHub</a>
     </div>
 
     <a href="PavanKumar_DS_Resume.pdf" download class="btn-resume">↓ Download Resume</a>
@@ -971,13 +989,13 @@
         <div class="education-card">
           <div class="education-degree">Master of Science</div>
           <div class="education-field">Computer Science</div>
-          <div class="education-school">University of Central Missouri</div>
+          <div class="education-school">Northern Arizona University</div>
           <div class="education-period">Jan 2024 – May 2025</div>
         </div>
         <div class="education-card">
           <div class="education-degree">Bachelor of Science</div>
           <div class="education-field">Computer Science</div>
-          <div class="education-school">GITAM Deemed University</div>
+          <div class="education-school">Jawaharlal Nehru Technological University</div>
           <div class="education-period">Jun 2016 – Aug 2020</div>
         </div>
       </div>
@@ -989,8 +1007,8 @@
         <p class="contact-sub">Open to new opportunities in Data Science, AI/ML Engineering, and related roles.</p>
         <div class="contact-links">
           <a href="mailto:pavankumarchilukoti98@gmail.com" class="contact-btn contact-btn-primary">✉ Send Email</a>
-          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener" class="contact-btn contact-btn-secondary">in LinkedIn</a>
-          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener" class="contact-btn contact-btn-secondary">⌥ GitHub</a>
+          <a href="https://www.linkedin.com/in/pavankumar-ch/" target="_blank" rel="noopener" class="contact-btn contact-btn-secondary">in LinkedIn</a>
+          <a href="https://github.com/chilukotipavankumar" target="_blank" rel="noopener" class="contact-btn contact-btn-secondary"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg> GitHub</a>
           <a href="PavanKumar_DS_Resume.pdf" download class="contact-btn contact-btn-secondary">↓ Resume PDF</a>
         </div>
       </div>
