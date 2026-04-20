@@ -295,6 +295,100 @@
     .tag-purple  { background: var(--purple-bg);   color: var(--purple-fg); }
     .tag-red     { background: var(--red-bg);      color: var(--red-fg); }
     .tag-gray    { background: var(--gray-bg);     color: var(--gray-fg); }
+
+    /* ── EXPERIENCE TIMELINE ── */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 36px;
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-spine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 16px;
+    }
+
+    .timeline-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      margin-top: 4px;
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .timeline-item:not(:first-child) .timeline-dot {
+      background: #a5b4fc;
+      box-shadow: 0 0 0 2px #a5b4fc;
+    }
+
+    .timeline-line {
+      width: 2px;
+      background: var(--border);
+      flex: 1;
+      margin-top: 6px;
+    }
+
+    .timeline-item:last-child .timeline-line { display: none; }
+
+    .timeline-body { flex: 1; }
+
+    .timeline-role {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 2px;
+    }
+
+    .timeline-company {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+
+    .timeline-period {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .timeline-bullets li {
+      font-size: 13px;
+      color: var(--text-body);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .timeline-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 10px;
+      top: 3px;
+    }
   </style>
 </head>
 <body>
@@ -478,6 +572,93 @@
             <span class="tag tag-gray">Power BI</span>
             <span class="tag tag-gray">Looker</span>
             <span class="tag tag-gray">Plotly</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="section-label">Experience</p>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-spine">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-role">Data Scientist – AI/ML Engineer</div>
+            <div class="timeline-company">Intuit · USA</div>
+            <div class="timeline-period">Jul 2025 – Present</div>
+            <ul class="timeline-bullets">
+              <li>Designed and deployed LLM-powered systems (RAG, embeddings, vector databases) serving 1M+ users, improving response accuracy by 25% via retrieval optimization</li>
+              <li>Built scalable ML microservices (FastAPI, gRPC) enabling real-time inference (&lt;200ms latency) across distributed systems</li>
+              <li>Led A/B testing and experimentation frameworks for AI features, driving +18% conversion uplift and 12% churn reduction</li>
+              <li>Developed causal inference &amp; uplift models, increasing campaign ROI by 22% through targeted interventions</li>
+              <li>Productionized ML pipelines using Docker, Kubernetes, Kubeflow, achieving 99.9% system uptime</li>
+              <li>Implemented CI/CD pipelines (Jenkins, GitHub Actions) reducing deployment time by 40%</li>
+              <li>Built model monitoring &amp; drift detection systems, reducing performance degradation incidents by 35%</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-spine">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-role">Senior Data Analyst – AI Engineer</div>
+            <div class="timeline-company">Vitrana · India</div>
+            <div class="timeline-period">Sep 2023 – Dec 2023</div>
+            <ul class="timeline-bullets">
+              <li>Built end-to-end ML pipelines (ETL → modeling → deployment) using Airflow and Apache Spark, processing large-scale structured &amp; unstructured data</li>
+              <li>Developed customer segmentation and predictive models, improving marketing efficiency by 25%</li>
+              <li>Conducted hypothesis testing (Chi-square, ANOVA) and experimentation to validate feature impact</li>
+              <li>Designed and deployed REST APIs for model serving, enabling real-time business integration</li>
+              <li>Optimized SQL pipelines and data workflows, reducing latency by 25–30%</li>
+              <li>Delivered executive dashboards (Power BI/Tableau) to track KPIs, experiments, and business performance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-spine">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-role">Senior Data Analyst – ML</div>
+            <div class="timeline-company">Cognizant Technology Solutions · India</div>
+            <div class="timeline-period">Dec 2020 – Aug 2023</div>
+            <ul class="timeline-bullets">
+              <li>Built scalable ML pipelines using PySpark and Kafka for real-time data processing and analytics</li>
+              <li>Developed ML models (Random Forest, XGBoost, LightGBM) improving customer retention by 15%</li>
+              <li>Designed and implemented A/B testing frameworks, increasing feature adoption by 28%</li>
+              <li>Created feature stores and model versioning pipelines (MLflow) to improve reproducibility</li>
+              <li>Deployed production-grade models using Docker &amp; Kubernetes, ensuring high availability</li>
+              <li>Automated workflows using Apache Airflow, reducing manual effort by 50%</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-spine">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-role">Data Scientist – AI/ML Engineer</div>
+            <div class="timeline-company">Mphasis · India</div>
+            <div class="timeline-period">Apr 2018 – Nov 2020</div>
+            <ul class="timeline-bullets">
+              <li>Built and deployed end-to-end ML systems from data ingestion to real-time inference in cloud environments</li>
+              <li>Developed classification, regression, and time series models, reducing operational costs by 20%</li>
+              <li>Implemented distributed data processing (Apache Spark) improving scalability by 3×</li>
+              <li>Designed RESTful APIs for ML inference and integrated them into production systems</li>
+              <li>Performed EDA, statistical modeling, and feature engineering to improve model performance</li>
+            </ul>
           </div>
         </div>
 
