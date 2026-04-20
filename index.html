@@ -259,6 +259,42 @@
       letter-spacing: 1px;
       font-weight: 600;
     }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .skill-group { display: flex; flex-direction: column; gap: 8px; }
+
+    .skill-group-name {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .tag-indigo  { background: var(--accent-tint); color: var(--accent); }
+    .tag-green   { background: var(--green-bg);    color: var(--green-fg); }
+    .tag-blue    { background: var(--blue-bg);     color: var(--blue-fg); }
+    .tag-orange  { background: var(--orange-bg);   color: var(--orange-fg); }
+    .tag-purple  { background: var(--purple-bg);   color: var(--purple-fg); }
+    .tag-red     { background: var(--red-bg);      color: var(--red-fg); }
+    .tag-gray    { background: var(--gray-bg);     color: var(--gray-fg); }
   </style>
 </head>
 <body>
@@ -342,6 +378,109 @@
             <div class="metric-label">System Uptime</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <p class="section-label">Skills</p>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-name">AI / LLMs</div>
+          <div class="skill-tags">
+            <span class="tag tag-indigo">LLMs</span>
+            <span class="tag tag-indigo">Prompt Engineering</span>
+            <span class="tag tag-indigo">Fine-Tuning (LoRA, PEFT)</span>
+            <span class="tag tag-indigo">RAG</span>
+            <span class="tag tag-indigo">Embeddings</span>
+            <span class="tag tag-indigo">Vector Databases</span>
+            <span class="tag tag-indigo">LLM Evaluation (RAGAS)</span>
+            <span class="tag tag-indigo">AI Agents</span>
+            <span class="tag tag-indigo">Multimodal AI</span>
+            <span class="tag tag-indigo">AI Guardrails &amp; Safety</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Machine Learning</div>
+          <div class="skill-tags">
+            <span class="tag tag-green">Supervised &amp; Unsupervised Learning</span>
+            <span class="tag tag-green">Feature Engineering</span>
+            <span class="tag tag-green">XGBoost</span>
+            <span class="tag tag-green">LightGBM</span>
+            <span class="tag tag-green">CatBoost</span>
+            <span class="tag tag-green">Random Forest</span>
+            <span class="tag tag-green">Deep Learning (ANN, CNN, RNN)</span>
+            <span class="tag tag-green">Transformers</span>
+            <span class="tag tag-green">Causal ML</span>
+            <span class="tag tag-green">Uplift Modeling</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Statistics &amp; Experimentation</div>
+          <div class="skill-tags">
+            <span class="tag tag-blue">A/B Testing</span>
+            <span class="tag tag-blue">Hypothesis Testing (Chi-square, ANOVA)</span>
+            <span class="tag tag-blue">Causal Inference</span>
+            <span class="tag tag-blue">Time Series (ARIMA, Prophet)</span>
+            <span class="tag tag-blue">Bayesian Methods</span>
+            <span class="tag tag-blue">Regression (Linear, Logistic)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Data Engineering</div>
+          <div class="skill-tags">
+            <span class="tag tag-orange">Python</span>
+            <span class="tag tag-orange">SQL (Advanced)</span>
+            <span class="tag tag-orange">PySpark</span>
+            <span class="tag tag-orange">Kafka</span>
+            <span class="tag tag-orange">Apache Airflow</span>
+            <span class="tag tag-orange">ETL/ELT Pipelines</span>
+            <span class="tag tag-orange">Data Warehousing</span>
+            <span class="tag tag-orange">dbt</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">MLOps &amp; Deployment</div>
+          <div class="skill-tags">
+            <span class="tag tag-purple">FastAPI</span>
+            <span class="tag tag-purple">Docker</span>
+            <span class="tag tag-purple">Kubernetes</span>
+            <span class="tag tag-purple">Kubeflow</span>
+            <span class="tag tag-purple">MLflow</span>
+            <span class="tag tag-purple">CI/CD (Jenkins, GitHub Actions)</span>
+            <span class="tag tag-purple">Model Monitoring</span>
+            <span class="tag tag-purple">Drift Detection</span>
+            <span class="tag tag-purple">Feature Stores</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Cloud &amp; Big Data</div>
+          <div class="skill-tags">
+            <span class="tag tag-red">AWS (S3, EC2, Lambda, SageMaker, Redshift)</span>
+            <span class="tag tag-red">GCP (BigQuery, Dataflow, Vertex AI)</span>
+            <span class="tag tag-red">Azure (Data Factory, Synapse, ML Studio)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Databases &amp; Visualization</div>
+          <div class="skill-tags">
+            <span class="tag tag-gray">PostgreSQL</span>
+            <span class="tag tag-gray">MongoDB</span>
+            <span class="tag tag-gray">Snowflake</span>
+            <span class="tag tag-gray">BigQuery</span>
+            <span class="tag tag-gray">Tableau</span>
+            <span class="tag tag-gray">Power BI</span>
+            <span class="tag tag-gray">Looker</span>
+            <span class="tag tag-gray">Plotly</span>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
