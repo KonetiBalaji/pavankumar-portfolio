@@ -548,6 +548,64 @@
     .contact-btn:hover { opacity: 0.85; }
     .contact-btn-primary { background: var(--accent); color: #fff; }
     .contact-btn-secondary { background: #fff; color: var(--accent); border: 2px solid var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      body { flex-direction: column; }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 16px;
+        gap: 12px;
+        z-index: 100;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        overflow-x: auto;
+        overflow-y: visible;
+      }
+
+      .sidebar > *:not(.sidebar-nav):not(.sidebar-avatar) { display: none; }
+
+      .sidebar-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+        margin: 0;
+        flex-shrink: 0;
+      }
+
+      .sidebar-nav {
+        flex-direction: row;
+        gap: 4px;
+        flex-wrap: nowrap;
+      }
+
+      .sidebar-nav-label { display: none; }
+
+      .sidebar-nav a {
+        white-space: nowrap;
+        padding: 5px 10px;
+        font-size: 11px;
+      }
+
+      .main {
+        padding: 28px 20px;
+        gap: 40px;
+      }
+
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .projects-grid { grid-template-columns: 1fr; }
+
+      .education-grid { grid-template-columns: 1fr; }
+
+      .hero-name { font-size: 26px; }
+    }
   </style>
 </head>
 <body>
