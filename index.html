@@ -464,6 +464,90 @@
       gap: 5px;
       margin-top: 4px;
     }
+
+    /* ── EDUCATION ── */
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .education-card {
+      background: var(--sidebar-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+
+    .education-degree {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 4px;
+    }
+
+    .education-field {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .education-school {
+      font-size: 12px;
+      color: var(--text-body);
+      margin-bottom: 3px;
+    }
+
+    .education-period {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      background: linear-gradient(135deg, var(--accent-tint), #f5f3ff);
+      border: 1px solid #ddd6fe;
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-heading);
+      margin-bottom: 8px;
+    }
+
+    .contact-sub {
+      font-size: 14px;
+      color: var(--text-body);
+      margin-bottom: 28px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .contact-btn:hover { opacity: 0.85; }
+    .contact-btn-primary { background: var(--accent); color: #fff; }
+    .contact-btn-secondary { background: #fff; color: var(--accent); border: 2px solid var(--accent); }
   </style>
 </head>
 <body>
@@ -803,6 +887,37 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <section id="education">
+      <p class="section-label">Education</p>
+      <div class="education-grid">
+        <div class="education-card">
+          <div class="education-degree">Master of Science</div>
+          <div class="education-field">Computer Science</div>
+          <div class="education-school">University of Central Missouri</div>
+          <div class="education-period">Jan 2024 – May 2025</div>
+        </div>
+        <div class="education-card">
+          <div class="education-degree">Bachelor of Science</div>
+          <div class="education-field">Computer Science</div>
+          <div class="education-school">GITAM Deemed University</div>
+          <div class="education-period">Jun 2016 – Aug 2020</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-box">
+        <div class="contact-heading">Let's Connect</div>
+        <p class="contact-sub">Open to new opportunities in Data Science, AI/ML Engineering, and related roles.</p>
+        <div class="contact-links">
+          <a href="mailto:pavankumarchilukoti98@gmail.com" class="contact-btn contact-btn-primary">✉ Send Email</a>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener" class="contact-btn contact-btn-secondary">in LinkedIn</a>
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener" class="contact-btn contact-btn-secondary">⌥ GitHub</a>
+          <a href="PavanKumar_DS_Resume.pdf" download class="contact-btn contact-btn-secondary">↓ Resume PDF</a>
+        </div>
       </div>
     </section>
   </main>
